@@ -169,11 +169,11 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin:6px 0 14px">
 <div style="background:#fff;border-radius:12px;padding:12px 14px;box-shadow:0 2px 8px rgba(30,60,90,.06);border-top:4px solid #2e6da4">
 <div style="font-weight:800;font-size:14px;color:#2e6da4;margin-bottom:6px">① 资产 Assets</div>
-<div style="font-size:12px;color:#42535f;line-height:1.85"><b>流动资产</b>（一年内能变现）：现金及约当现金 · 应收账款 · 存货<br><b>非流动资产</b>：有形资产(厂房·设备) · 无形资产(专利·商标) · 金融资产(股权·长期投资)</div>
+<div style="font-size:12px;color:#42535f;line-height:1.85"><b>流动资产</b>（一年内能变现）：现金及约当现金 · 应收账款 · 存货 · <span style="color:#c0392b">预付账款⚠</span><br><b>非流动资产</b>：有形资产(厂房·设备) · 无形资产(专利·商标) · 金融资产(股权·长期投资) · <span style="color:#c0392b">商誉⚠</span></div>
 </div>
 <div style="background:#fff;border-radius:12px;padding:12px 14px;box-shadow:0 2px 8px rgba(30,60,90,.06);border-top:4px solid #c9722e">
 <div style="font-weight:800;font-size:14px;color:#c9722e;margin-bottom:6px">② 负债 Liabilities</div>
-<div style="font-size:12px;color:#42535f;line-height:1.85"><b>流动负债</b>（一年内要还）：短期借款 · 应付账款 · 应交税费<br><b>非流动负债</b>：长期借款 · 长期应付款</div>
+<div style="font-size:12px;color:#42535f;line-height:1.85"><b>流动负债</b>（一年内要还）：短期借款 · 应付账款 · 应交税费 · <span style="color:#c0392b">应付职工薪酬⚠</span> · <span style="color:#c0392b">预收账款⚠</span><br><b>非流动负债</b>：长期借款 · 长期应付款</div>
 </div>
 <div style="background:#fff;border-radius:12px;padding:12px 14px;box-shadow:0 2px 8px rgba(30,60,90,.06);border-top:4px solid #2fa39a">
 <div style="font-weight:800;font-size:14px;color:#2fa39a;margin-bottom:6px">③ 股东权益 Equity</div>
@@ -185,9 +185,17 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
 </div>
 <div style="background:#fff;border-radius:12px;padding:12px 14px;box-shadow:0 2px 8px rgba(30,60,90,.06);border-top:4px solid #c0392b">
 <div style="font-weight:800;font-size:14px;color:#c0392b;margin-bottom:6px">⑤ 费用 Expenses</div>
-<div style="font-size:12px;color:#42535f;line-height:1.85">营业成本 · 税金及附加 · 销售/管理/研发费用 · 财务费用(利息) · 信用及资产减值损失</div>
+<div style="font-size:12px;color:#42535f;line-height:1.85">营业成本 · 税金及附加 · 销售/管理/研发费用（内含<span style="color:#c0392b">折旧摊销⚠</span>） · 财务费用(利息) · 信用及资产减值损失</div>
 </div>
 </div>
+<div class="insight" style="background:#fdECEC;border-left:3px solid #c0392b">⚠ <b>反常识警报：钱有没有动，不等于要素怎么归类。</b>标了⚠的五项最容易让新手卡壳，共同的原理是第 1 章讲的<b>权责发生制</b>——归类看「义务/权利有没有成立」，不看「钱这一刻有没有过手」：
+<div style="font-size:12.5px;color:#42535f;line-height:1.85;margin-top:6px">
+<b>应付职工薪酬</b>——工资还没发，但只要这个月员工干了活、公司欠了这笔钱，义务就已经成立，现在就得算<b>负债</b>，不是等发钱那天才算。<br>
+<b>预收账款</b>——客户的钱已经到账了，听着像"赚到了"，但因为货还没发、服务还没做，公司欠着人家一个交付，所以是<b>负债</b>，不是收入。<br>
+<b>预付账款</b>——钱已经付出去了，直觉像"花掉的费用"，但换来的是"以后能拿到货/服务"这个权利，所以算<b>资产</b>，不是费用。<br>
+<b>商誉</b>——收购时多付的溢价，摸不着看不见，但代表未来能带来超额回报的能力，算<b>资产</b>。<br>
+<b>折旧摊销</b>——买设备那年一次性花了一大笔现金，但费用不能在那一年全记完，要按使用年限摊到以后每一年，跟"钱哪年花的"完全脱钩。
+</div></div>
 <div class="dim">
 <div class="d" style="border-color:#37516a"><b>资产 ＝ 负债 ＋ 股东权益</b>静态恒等式，资产负债表在任一时点都必须成立——第 1 章开篇就是这条。</div>
 <div class="d" style="border-color:#8156c9"><b>收入 － 费用 ＝ 净利润</b>动态计算，覆盖一段时间（利润表），是「流量」不是「存量」，跟上面那条恒等式看的不是一回事。</div>
