@@ -1543,6 +1543,15 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
 <div class="wctrl">应付账款变动 <input type="range" id="cqAP" min="-50" max="50" step="2" value="8"><b id="cqAPV" style="min-width:88px;display:inline-block"></b></div>
 <div id="cqOut"></div></div>
 
+<div class="wbox">
+<div class="wtag p">实战 · 你来当 CFO</div>
+<div style="font-weight:800;font-size:14.5px;color:#25303b;margin:2px 0 4px">L 公司下一年：五轮真实决策，亲手写出这张表怎么被你改写</div>
+<div style="font-size:12.5px;color:#7a8794;margin-bottom:10px">虚构续集：期初现金 25（承接上面拼装器的期末现金），本年利润、负债、存货独立设定，跟上表数字无需对得上。每轮选 A 或 B，看你的选择怎么改变这四个数。</div>
+<div id="cfoDash" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px"></div>
+<div id="cfoOut"></div>
+<div class="wctrl" style="margin-top:10px"><button type="button" class="wbtn" id="cfoResetBtn">↺ 重来</button></div>
+</div>
+
 <div class="dim"><b>最后两个口径细节（16.5）</b>
 <div class="d" style="border-color:#4a7fb5"><b>什么才算「现金」</b>库存现金＋活期存款＋三个月内到期、几乎没有价格风险的短期投资。股票不算——价格会跳。「三个月」是行业通行的分界线。</div>
 <div class="d" style="border-color:#b0483a"><b>银行透支的两种摆法</b>可以当「负的现金」并进现金等价物（德法英常见，Wipro 就这么干），也可以当短期融资摆进融资活动。摆法不同，期末「现金」数字就不同——读表第一步永远是翻附注看口径。</div>
@@ -2191,6 +2200,89 @@ function wfRender(){var h='';
 document.getElementById('wfNext').onclick=function(){if(wfI<WF.length-1){wfI++;wfRender();}};
 document.getElementById('wfReset').onclick=function(){wfI=0;wfRender();};
 wfRender();
+
+/* ===== ch16 widget 3: CFO 决策小游戏（虚拟仿真平台试点） ===== */
+var CFO_INIT = {cash:25, profit:0, debt:80, inv:60};
+var CFO_ROUNDS = [
+ {q:'旺季要不要囤货？', opts:[
+   {label:'大举囤货，赌旺季旺销', note:'存货 +40，现金 −40', d:{cash:-40,profit:0,debt:0,inv:40}},
+   {label:'随卖随订，保守囤货', note:'存货 +10，现金 −10', d:{cash:-10,profit:0,debt:0,inv:10}}
+ ]},
+ {q:'大客户要求延长账期换一笔大单，接不接？', opts:[
+   {label:'同意延长账期，拿下大单', note:'利润 +30，现金只到手 +5——利润≠现金又来了', d:{cash:5,profit:30,debt:0,inv:0}},
+   {label:'坚持全款结清，只接小单', note:'利润 +10，现金同步 +10', d:{cash:10,profit:10,debt:0,inv:0}}
+ ]},
+ {q:'设备老化，要不要现在贷款换新？', opts:[
+   {label:'贷款换新设备', note:'现金 −20，负债 +50，过渡期利润 −5', d:{cash:-20,profit:-5,debt:50,inv:0}},
+   {label:'先凑合，明年再说', note:'四个数字都不变', d:{cash:0,profit:0,debt:0,inv:0}}
+ ]},
+ {q:'存货压得有点多，要不要打折促销清库存？', opts:[
+   {label:'大促销清库存', note:'存货 −50，现金 +45，让利伤了利润 −5', d:{cash:45,profit:-5,debt:0,inv:-50}},
+   {label:'挺价格，不打折', note:'存货 −10，现金 +8，利润 +2', d:{cash:8,profit:2,debt:0,inv:-10}}
+ ]},
+ {q:'年底了，要不要提前还一笔 60 的短期借款？', opts:[
+   {label:'提前还款 60', note:'现金 −60，负债 −60', d:{cash:-60,profit:0,debt:-60,inv:0}},
+   {label:'留着现金过冬，不提前还', note:'四个数字都不变', d:{cash:0,profit:0,debt:0,inv:0}}
+ ]}
+];
+var cfoState, cfoRound, cfoLastNote;
+function cfoBox(lab,v){
+ return '<div style="flex:1;min-width:100px;border:1.5px solid #c9d6e2;border-radius:9px;padding:7px 9px;background:#fff"><div style="font-size:10px;color:#7a8794">'+lab+'</div><div style="font-weight:800;font-size:14px;color:#25303b">'+v+'</div></div>';
+}
+function cfoDashHTML(){
+ return cfoBox('现金',cfoState.cash)+cfoBox('本年利润',cfoState.profit)+cfoBox('有息负债',cfoState.debt)+cfoBox('存货',cfoState.inv);
+}
+function cfoVerdictHTML(){
+ var dCash = cfoState.cash - CFO_INIT.cash;
+ var profit = cfoState.profit;
+ var pcolor, pname, pnote;
+ if(dCash>=profit){pcolor='#1e7f77';pname='现金为王';pnote='现金增量追平甚至超过账面利润，攒下的都是真金白银。';}
+ else if(dCash>=0.6*profit){pcolor='#2fa39a';pname='基本同步，稳健';pnote='现金和利润没脱节太远，正常的生意呼吸。';}
+ else if(dCash>=0){pcolor='#c98a2b';pname='利润好看，现金没跟上';pnote='账面利润在涨，但现金增量明显落后——小心存货、账期在悄悄吃钱。';}
+ else {pcolor='#c0392b';pname='现金流失血';pnote='不管账面利润多好看，现金实打实变少了——这是本课反复强调的红线。';}
+ var debtColor, debtName;
+ if(cfoState.debt > 2*cfoState.cash){debtColor='#c0392b';debtName='杠杆偏高，抗风险能力弱';}
+ else {debtColor='#1e7f77';debtName='杠杆可控';}
+ return '<div style="margin-top:2px;border:1.5px solid '+pcolor+';border-radius:9px;padding:9px 12px;background:#fff">'
+  +'<div><span style="font-weight:800;color:'+pcolor+'">利润质量 · '+pname+'</span></div>'
+  +'<div style="font-size:12.5px;color:#42535f;line-height:1.6;margin:3px 0 8px">'+pnote+'（Δ现金 '+(dCash>=0?'+':'')+dCash+'，本年利润 '+profit+'）</div>'
+  +'<div><span style="font-weight:800;color:'+debtColor+'">负债结构 · '+debtName+'</span></div>'
+  +'<div style="font-size:12.5px;color:#42535f;line-height:1.6;margin-top:3px">期末负债 '+cfoState.debt+' 对 期末现金 '+cfoState.cash+'。</div>'
+  +'</div>';
+}
+function cfoRender(){
+ document.getElementById('cfoDash').innerHTML = cfoDashHTML();
+ var head = cfoLastNote ? '<div style="font-size:11.5px;color:#8a97a3;margin-bottom:8px">上一轮：'+cfoLastNote+'</div>' : '';
+ if(cfoRound >= CFO_ROUNDS.length){
+  document.getElementById('cfoOut').innerHTML = head + '<div style="font-weight:800;font-size:14px;color:#25303b;margin-bottom:4px">五轮跑完，体检报告：</div>' + cfoVerdictHTML();
+  return;
+ }
+ var r = CFO_ROUNDS[cfoRound];
+ var html = head + '<div style="font-weight:800;font-size:13.5px;color:#25303b;margin-bottom:8px">第 '+(cfoRound+1)+' / '+CFO_ROUNDS.length+' 轮 · '+r.q+'</div>';
+ r.opts.forEach(function(opt, idx){
+  html += '<button type="button" class="wbtn" style="display:block;width:100%;text-align:left;margin-bottom:6px;white-space:normal" onclick="cfoChoose('+idx+')"><b>'+(idx===0?'A. ':'B. ')+opt.label+'</b><br><span style="font-weight:400;font-size:11.5px;color:#7a8794">'+opt.note+'</span></button>';
+ });
+ document.getElementById('cfoOut').innerHTML = html;
+}
+function cfoChoose(idx){
+ var opt = CFO_ROUNDS[cfoRound].opts[idx];
+ cfoState.cash += opt.d.cash;
+ cfoState.profit += opt.d.profit;
+ cfoState.debt += opt.d.debt;
+ cfoState.inv += opt.d.inv;
+ cfoLastNote = opt.label + '（' + opt.note + '）';
+ cfoRound++;
+ cfoRender();
+}
+function cfoReset(){
+ cfoState = {cash:CFO_INIT.cash, profit:CFO_INIT.profit, debt:CFO_INIT.debt, inv:CFO_INIT.inv};
+ cfoRound = 0;
+ cfoLastNote = null;
+ cfoRender();
+}
+document.getElementById('cfoResetBtn').onclick = cfoReset;
+cfoReset();
+
 /* ch16 widget 2: 利润≠现金模拟器 */
 function cqRender(){
  var ar=+document.getElementById('cqAR').value,inv=+document.getElementById('cqINV').value,ap=+document.getElementById('cqAP').value;
