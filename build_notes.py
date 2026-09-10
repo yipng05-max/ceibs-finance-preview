@@ -42,6 +42,9 @@ EXTRA_STYLE = '''<style>
 .pretag{display:inline-block;font-size:11.5px;font-weight:700;color:#2e6da4;background:#eaf1f7;border-radius:8px;padding:2px 9px;margin:2px 4px 6px 0}
 .jinju{background:linear-gradient(135deg,#6f42c1,#8156c9);color:#fff;border-radius:12px;padding:14px 18px;margin:12px 0;font-size:17px;font-weight:800;text-align:center;letter-spacing:.5px;box-shadow:0 3px 12px rgba(111,66,193,.25)}
 .jinju small{display:block;font-size:12px;font-weight:500;opacity:.85;margin-top:5px;letter-spacing:0}
+.kaodian{background:#fff5f5;border:2px solid #c0392b;border-radius:12px;padding:12px 14px;margin:12px 0;font-size:13.5px;color:#4a2a2a;line-height:1.7}
+.kaodian .kt{display:inline-block;font-size:12px;font-weight:800;color:#fff;background:#c0392b;border-radius:10px;padding:2px 10px;margin-bottom:6px}
+.kaodian ul{margin:4px 0 0 18px}.kaodian li{margin:3px 0}
 </style>'''
 
 def class_block(n):
