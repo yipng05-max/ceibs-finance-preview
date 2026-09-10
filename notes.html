@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACCT5002《财务报告》课堂笔记</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:#25303b;background:#eef2f6;line-height:1.75}
+.hero{background:linear-gradient(135deg,#1c3d5a,#2e6da4);color:#fff;padding:34px 18px 26px;text-align:center}
+.hero h1{font-size:23px;margin-bottom:8px}.hero .sub{font-size:14px;opacity:.9;margin-bottom:4px}
+.hero .book{font-size:12px;opacity:.8;margin-top:8px}
+.intro{max-width:820px;margin:16px auto;padding:0 14px}
+.introcard{background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 2px 12px rgba(30,60,90,.07);font-size:15px}
+.introcard b{color:#2e6da4}
+.scope{background:#fff7e8;border:1px solid #f0d9a8;border-radius:10px;padding:10px 14px;margin-top:12px;font-size:14px;color:#7a5a1a}
+.nav{position:sticky;top:0;background:#ffffffe8;backdrop-filter:blur(6px);border-bottom:1px solid #dde5ec;padding:8px 10px;display:flex;flex-wrap:wrap;gap:6px 6px;z-index:20}
+.navlink{font-size:12px;color:#42627e;text-decoration:none;padding:5px 10px;border-radius:14px;background:#eaf1f7;flex:0 0 auto}
+.navlink.active{background:#2e6da4;color:#fff}
+.wrap{max-width:820px;margin:0 auto;padding:14px}
+.blockdiv{color:#fff;border-radius:12px;padding:16px 18px;margin:22px 0 10px}
+.blockdiv .bt{font-size:18px;font-weight:800}.blockdiv .bd{font-size:13px;opacity:.92;margin-top:5px}
+.ch{background:#fff;border-radius:12px;padding:16px;margin:14px 0;box-shadow:0 2px 10px rgba(30,60,90,.06);scroll-margin-top:56px}
+.chhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.chnum{color:#fff;font-size:13px;font-weight:700;padding:3px 10px;border-radius:14px}
+.chtitle{font-size:18px;font-weight:800;color:#25303b}
+.chpage{font-size:12px;color:#9aa7b3;margin-left:auto}
+.chintro{background:#f2f7fb;border-left:3px solid #2e6da4;border-radius:8px;padding:9px 12px;margin:10px 0;font-size:14px;color:#37516a}
+.secbox{margin:8px 0}
+.seclabel{font-size:12px;color:#8b98a5;margin-bottom:4px}
+.seclist{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:4px 14px}
+.seclist li{font-size:13px;color:#40515f;padding:3px 0 3px 14px;position:relative}
+.seclist li:before{content:'▪';position:absolute;left:0;color:#a9c4dc}
+.cards4{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.c4{border-radius:9px;padding:9px 11px;font-size:13px}
+.c4 b{display:block;font-size:12px;margin-bottom:3px}
+.c4 span{color:#9aa7b3;font-size:12px}
+.c4a{background:#eaf4ea}.c4a b{color:#37955f}
+.c4b{background:#fdf0e8}.c4b b{color:#c9722e}
+.c4c{background:#eaf0fb}.c4c b{color:#3a5bbf}
+.c4d{background:#f3ecfa}.c4d b{color:#8156c9}
+footer{text-align:center;color:#8fa0af;font-size:12px;padding:26px 14px 44px}
+.section-t{font-size:17px;font-weight:800;color:#25303b;margin:26px 4px 10px;display:flex;align-items:center;gap:8px;scroll-margin-top:56px}
+.casehero{width:100%;border-radius:12px;display:block;margin:8px 0 4px;box-shadow:0 2px 10px rgba(30,60,90,.08)}
+.insight{background:#fff;border-radius:12px;padding:14px 16px;margin:10px 0;box-shadow:0 2px 10px rgba(30,60,90,.06)}
+.insight h4{font-size:15px;margin-bottom:5px;color:#25303b}
+.insight p{font-size:13.5px;color:#40515f;margin:5px 0}
+.insight .k{color:#c9722e;font-weight:600}
+.svgwrap{background:#fff;border-radius:12px;padding:14px 10px;margin:12px 0;box-shadow:0 2px 10px rgba(30,60,90,.06);overflow-x:auto}
+.svgwrap svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.svgcap{font-size:12.5px;color:#8b98a5;text-align:center;margin-top:8px}
+.arch{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:10px 0}
+.arch .a{border-radius:10px;padding:10px 11px;font-size:12.5px;color:#42535f;border-top:3px solid}
+.arch .a b{display:block;font-size:13px;margin-bottom:3px}
+.arch .a1{background:#eef4fb;border-color:#2e6da4}.arch .a1 b{color:#2e6da4}
+.arch .a2{background:#eafaf7;border-color:#2fa39a}.arch .a2 b{color:#1f8a80}
+.arch .a3{background:#f4eefb;border-color:#8156c9}.arch .a3 b{color:#8156c9}
+.qlist{background:#fff;border-radius:12px;padding:8px 16px;margin:12px 0;box-shadow:0 2px 10px rgba(30,60,90,.06);counter-reset:q}
+.qlist .q{font-size:13.5px;color:#37516a;padding:9px 0 9px 34px;position:relative;border-bottom:1px dashed #eef2f6}
+.qlist .q:last-child{border-bottom:none}
+.qlist .q:before{counter-increment:q;content:counter(q);position:absolute;left:0;top:8px;width:23px;height:23px;background:#2e6da4;color:#fff;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.dim{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:10px 0}
+.dim .d{background:#fff;border-radius:10px;padding:11px 12px;box-shadow:0 2px 8px rgba(30,60,90,.05);font-size:12.5px;color:#42535f;border-left:3px solid #2e6da4}
+.dim .d b{display:block;font-size:13px;color:#25303b;margin-bottom:4px}
+.cpr{font-size:12px;color:#93a0ac;background:#f6f8fa;border-radius:8px;padding:9px 13px;margin:14px 0 4px;line-height:1.6}
+.plain{background:#f4eefb;border-left:3px solid #8156c9;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;font-size:13.5px;color:#574769;line-height:1.72}
+.plain b{color:#8156c9}
+
+@media(max-width:560px){.arch,.dim{grid-template-columns:1fr}}
+
+.section-t .bar{width:4px;height:18px;border-radius:2px;background:#2e6da4}
+.fac{background:#fff;border-radius:12px;padding:15px 16px;margin:12px 0;box-shadow:0 2px 10px rgba(30,60,90,.06)}
+.fachead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:7px}
+.facname{font-size:18px;font-weight:800;color:#25303b}
+.facen{font-size:13px;color:#9aa7b3}
+.factag{font-size:12px;color:#fff;background:#2e6da4;border-radius:12px;padding:2px 10px;margin-left:auto}
+.factag.p{background:#8156c9}
+.facrole{font-size:13px;color:#42627e;margin-bottom:6px}
+.facli{list-style:none;font-size:13.5px;color:#40515f}
+.facli li{padding:3px 0 3px 16px;position:relative}
+.facli li:before{content:'▪';position:absolute;left:0;color:#a9c4dc}
+.facli .hi{color:#c9722e;font-weight:600}
+.day{background:#fff;border-radius:12px;margin:12px 0;box-shadow:0 2px 10px rgba(30,60,90,.06);overflow:hidden}
+.dayhd{color:#fff;padding:10px 15px;display:flex;align-items:center;gap:10px}
+.dayhd .dn{font-size:15px;font-weight:800}
+.dayhd .dt{font-size:12.5px;opacity:.92}
+.dayhd .dc{font-size:11.5px;margin-left:auto;background:#ffffff33;border-radius:10px;padding:2px 9px}
+.daybd{padding:12px 15px}
+.lec{font-size:13.5px;color:#37516a;padding:5px 0;border-bottom:1px dashed #e6ecf1}
+.lec:last-child{border-bottom:none}.lec b{color:#25303b}
+.dayex{font-size:12.5px;color:#7a5a1a;background:#fff7e8;border-radius:8px;padding:7px 10px;margin-top:9px}
+.daych{font-size:12px;color:#5a6b7a;margin-top:8px}
+.daych .rb{display:inline-block;background:#eaf1f7;border-radius:9px;padding:1px 8px;margin:2px 3px 0 0}
+.daych .rb.x{background:#f3ecfa;color:#8156c9}
+@media(max-width:560px){.seclist{grid-template-columns:1fr}.cards4{grid-template-columns:1fr}}
+.comic{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}.comic figure{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(30,60,90,.06)}.comic img{width:100%;display:block}.comic figcaption{font-size:12.5px;color:#42535f;padding:9px 11px;line-height:1.62}.comic figcaption b{color:#c9722e}@media(max-width:560px){.comic{grid-template-columns:1fr}}
+.vstage{background:#fff;border-radius:14px;padding:14px;margin:12px 0;box-shadow:0 2px 10px rgba(30,60,90,.06);border-left:4px solid #c9722e}.vsnum{font-size:15px;font-weight:800;color:#c9722e;margin-bottom:9px}.vsimg{width:100%;border-radius:10px;display:block;margin-bottom:9px}.vscap{font-size:13.5px;color:#40515f;line-height:1.72}.vscap b{color:#25303b}.vskey{background:#fff7e8;border:1px solid #f0d9a8;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px;color:#7a5a1a;line-height:1.68}.vskey b{color:#c9722e}
+.gloss{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:8px 0}.gt{background:#fff;border-radius:11px;padding:11px 13px;box-shadow:0 2px 9px rgba(30,60,90,.06);border-top:3px solid #37955f;display:flex;flex-direction:column}.gterm{font-size:14px;font-weight:800;color:#25303b;margin-bottom:5px;line-height:1.4}.gsub{font-size:11px;font-weight:600;color:#37955f;background:#eafaf1;border-radius:8px;padding:1px 7px;margin-left:6px;white-space:nowrap}.gdef{font-size:12.8px;color:#42535f;line-height:1.6;margin-bottom:6px}.gsay{font-size:12.5px;color:#574769;background:#f4eefb;border-left:3px solid #8156c9;border-radius:0 8px 8px 0;padding:7px 10px;line-height:1.62;margin-bottom:8px}.gch{font-size:11px;color:#c9722e;background:#fdf0e8;border-radius:8px;padding:2px 9px;align-self:flex-start;margin-top:auto;text-decoration:none}a.gch:hover{background:#f7e0cd}@media(max-width:560px){.gloss{grid-template-columns:1fr}}
+.wbox{background:#fff;border-radius:14px;padding:14px 15px;margin:12px 0;box-shadow:0 2px 12px rgba(30,60,90,.08);border:1px solid #eef2f6}
+.wtag{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:#2e6da4;border-radius:7px;padding:2px 9px;margin-bottom:8px}
+.wtag.p{background:#8156c9}.wtag.r{background:#c9722e}
+.wctrl{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:6px 0 4px}
+.wbtn{font-size:13px;font-weight:700;color:#2e6da4;background:#eef4fb;border:1px solid #cfe0ef;border-radius:9px;padding:7px 14px;cursor:pointer;transition:.15s}
+.wbtn:hover{background:#dceaf7}.wbtn:active{transform:translateY(1px)}
+.wbtn.play{color:#fff;background:#2e6da4;border-color:#2e6da4}
+.wbtn:disabled{opacity:.4;cursor:not-allowed}
+.wprog{font-size:12.5px;color:#7a8794;font-weight:600}
+input[type=range]{-webkit-appearance:none;height:6px;border-radius:6px;background:#dbe6f0;outline:none;flex:1;min-width:150px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#2e6da4;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+.stepbody{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}
+.stepcol{border-radius:10px;padding:10px 12px;font-size:13px}
+.assetcol{background:#eef4fb;border:1px solid #cfe0ef}.claimcol{background:#fbf3ec;border:1px solid #ecd6c2}
+.stepcol h5{margin:0 0 6px;font-size:12.5px;font-weight:800}.assetcol h5{color:#2e6da4}.claimcol h5{color:#c9722e}
+.srow{display:flex;justify-content:space-between;padding:3px 0;color:#42535f;line-height:1.5}
+.srow.d{color:#1f8a80;font-weight:700}.srow.tot{border-top:1px solid #c9d6e2;margin-top:5px;padding-top:6px;font-weight:800}
+.assetcol .srow.tot{color:#2e6da4}.claimcol .srow.tot{color:#c9722e}
+.stepmsg{font-size:13px;color:#40515f;background:#fff7e8;border:1px solid #f0d9a8;border-radius:9px;padding:9px 12px;line-height:1.6;margin:6px 0}
+.stepmsg b{color:#c9722e}
+.stepbadge{text-align:center;font-size:13.5px;font-weight:800;color:#1f8a80;background:#eafaf7;border:1px solid #bfe3db;border-radius:9px;padding:8px;margin-top:4px}
+.levout{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.levcard{border-radius:10px;padding:11px 12px;text-align:center}
+.levcard .lv{font-size:24px;font-weight:800;line-height:1.1}.levcard .ll{font-size:11.5px;color:#7a8794;margin-top:3px}
+.levbar{height:26px;border-radius:7px;overflow:hidden;display:flex;margin:8px 0;font-size:11px;font-weight:700;color:#fff;line-height:26px}
+.levbar .e{background:#2fa39a}.levbar .d{background:#c9722e}
+.pchint{font-size:12px;color:#7a8794;text-align:center;margin-top:4px}
+@media(max-width:560px){.stepbody{grid-template-columns:1fr}.levout{grid-template-columns:1fr}}
+</style>
+<style>
+.nb-table{width:100%;border-collapse:collapse;margin:8px 0;font-size:12.5px}
+.nb-table th{background:#f6f1ff;color:#6f42c1;text-align:left;padding:8px 10px;border-bottom:2px solid #d9c9f2;font-weight:800}
+.nb-table td{padding:8px 10px;border-bottom:1px solid #eef1f4;color:#42535f}
+.nb-table tr:last-child td{border-bottom:none}
+.nb-wrap{overflow-x:auto;margin:10px 0}
+.nb-say{background:#f4eefb;border-left:3px solid #8156c9;border-radius:0 8px 8px 0;padding:8px 12px;margin:6px 0 14px;font-size:12.5px;color:#574769;line-height:1.7}
+.nb-formula{background:#fff;border:1.5px solid #d9c9f2;border-radius:10px;padding:12px 14px;margin:8px 0;font-family:"SF Mono",Consolas,monospace;font-size:12.5px;color:#42535f;line-height:2}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>课堂笔记 · ACCT5002《财务报告》</h1>
+  <div class="sub">新东方教育集团财务负责人分享（2026-09-09）</div>
+  <div class="sub" style="font-size:12.5px"><a href="index.html" style="color:#fff;opacity:.85">← 返回预习站</a></div>
+</div>
+
+<div class="wrap">
+
+<div class="section-t" id="pos"><span class="bar" style="background:#8156c9"></span>一、这次分享的定位</div>
+<div class="chintro" style="margin:6px 4px">新东方师兄用一个类比，解释了"为什么公司财务人员不会给你看这么复杂的财务报表"——报表的使用者和编制者，天生站在两种完全不同的心态里。</div>
+<div class="dim">
+<div class="d" style="border-color:#c0392b"><b>外部使用者 · "渣男心态"</b>政府部门、债权人、供应商、潜在投资者——阅人无数、眼光独到，但难以深交。看报表是"管中窥豹"，靠有限的公开信息浅入深出地快速判断。</div>
+<div class="d" style="border-color:#1f8a80"><b>内部管理者 · "爱人心态"</b>公司内部的财务人员和管理层——深情专一、家长里短、长久陪伴。因为长期泡在业务里，能"业务陪伴、深入浅出"地理解每个数字背后真正发生了什么。</div>
+</div>
+<div class="plain">🗣 <b>大白话：</b>外人看报表，像相亲见了几面就要下判断，只能靠经验和眼光；公司自己人看报表，像过日子过久了的两口子，每一笔钱背后的来龙去脉都门儿清。这也是为什么同一张报表，内部人和外部人能读出完全不同的信息量。</div>
+
+<div class="section-t" style="font-size:15px;margin:26px 4px 6px"><span class="bar" style="background:#37516a;height:15px"></span>二、新东方课件里的重点新内容（预习站目前没有）</div>
+<div class="chintro" style="margin:6px 4px">下面十条是新东方课件里有、咱们预习站还没覆盖到的内容，按价值排序，第一条最值得细读。</div>
+
+<div class="section-t" style="font-size:15.5px;margin:22px 4px 8px"><span class="bar" style="background:#c0392b;height:15px"></span>① 会计人员 vs 财务BP 思维方式对比</div>
+<div class="chintro" style="margin:0 4px 6px">这门课叫"决策者的财务视角"而不是"会计学"，原因就在这张对比表里——决策者要学的是财务BP（Business Partner）那套思维，不是会计核算那套。</div>
+<div class="nb-wrap"><table class="nb-table">
+<tr><th>维度</th><th>会计人员思维</th><th>财务BP思维</th></tr>
+<tr><td>追求</td><td>标准答案</td><td>次优选择</td></tr>
+<tr><td>关注点</td><td>形式</td><td>实质</td></tr>
+<tr><td>结果</td><td>精确的</td><td>正确的</td></tr>
+<tr><td>时态</td><td>过去完成时</td><td>现在将来时</td></tr>
+<tr><td>服务对象</td><td>给外部人看</td><td>给内部人干</td></tr>
+<tr><td>定位</td><td>造积木</td><td>搭积木</td></tr>
+<tr><td>导向</td><td>结果</td><td>过程</td></tr>
+<tr><td>价值</td><td>决定底线</td><td>决定上限</td></tr>
+</table></div>
+<div class="nb-say">🗣 <b>大白话：</b>会计像"照相"，忠实记录已经发生的事，一是一二是二，求的是标准答案；财务BP像"导航"，面向还没发生的未来，帮公司在多个不完美的选项里挑一个相对最优的。这门课学的不是怎么记账（造积木），是怎么用账上的数字帮公司做决策（搭积木）。</div>
+
+<div class="section-t" style="font-size:15.5px;margin:22px 4px 8px"><span class="bar" style="background:#8156c9;height:15px"></span>② 收入确认五步法</div>
+<div class="dim">
+<div class="d" style="border-color:#8156c9">① 识别客户合同　② 识别合同中的履约义务　③ 确定交易价格　④ 将交易价格分摊至各项履约义务　⑤ 在履行义务时（或履约过程中）确认收入</div>
+</div>
+<div class="nb-say">🗣 <b>大白话：</b>不是"卖出去就能记收入"这么简单，得先看合同里答应了客户几件事（履约义务），一份合同卖了"设备+安装+一年保修"三件事，收入要按这三件事分开确认，装完设备就能记那部分的收入，保修的那部分要等一年慢慢确认，不能一次性全部入账。</div>
+
+<div class="section-t" style="font-size:15.5px;margin:22px 4px 8px"><span class="bar" style="background:#2e6da4;height:15px"></span>③ 存货三阶段追踪</div>
+<div class="dim">
+<div class="d" style="border-color:#2e6da4"><b>原材料</b>期初存货 ＋ 采购 － 生产消耗 ＝ 期末存货</div>
+<div class="d" style="border-color:#2e6da4"><b>在制品</b>期初存货 ＋ 资源消耗（原材料成本＋人工＋折旧＋能源等）－ 转出产成品 ＝ 期末存货</div>
+<div class="d" style="border-color:#2e6da4"><b>产成品</b>期初存货 ＋ 生产环节转入 － 转入利润表（销货成本）＝ 期末存货</div>
+</div>
+<div class="nb-say">🗣 <b>大白话：</b>一批原料变成能卖的产品，要经过"原材料仓→生产线→成品仓"三道门，每道门都是"期初有多少+这道门进了多少-出了多少=还剩多少"的滚存算法，跟银行流水记账是一个逻辑，只是流的不是钱，是货。</div>
+
+<div class="section-t" style="font-size:15.5px;margin:22px 4px 8px"><span class="bar" style="background:#c9722e;height:15px"></span>④ 固定资产摊销年限参考表</div>
+<div class="nb-wrap"><table class="nb-table">
+<tr><th>类别</th><th>细类</th><th>常用摊销/折旧年限</th></tr>
+<tr><td rowspan="7">有形资产</td><td>商务楼</td><td>20–50 年</td></tr>
+<tr><td>工厂</td><td>20 年</td></tr>
+<tr><td>设备</td><td>8–10 年</td></tr>
+<tr><td>工业设备（工具）</td><td>5–10 年</td></tr>
+<tr><td>交通工具</td><td>4–5 年</td></tr>
+<tr><td>家具</td><td>10 年</td></tr>
+<tr><td>电脑</td><td>3 年</td></tr>
+<tr><td>无形资产</td><td>有使用年限（专利、著作权、特许经营权、软件）</td><td>在使用年限内摊销</td></tr>
+<tr><td></td><td>无固定使用年限（商标、商誉）</td><td>不摊销，涉及减值</td></tr>
+<tr><td>金融资产</td><td>投资</td><td>不摊销，涉及减值和公允价值变动</td></tr>
+</table></div>
+<div class="nb-say">🗣 <b>大白话：</b>电脑3年就得摊完，商务楼能摊20-50年——摊销年限本质是"这东西还能帮公司赚几年钱"的估计，估计得越短，每年摊进费用的钱越多，利润被压得越狠，这也是为什么有些公司会在年限估计上做文章。</div>
+
+<div class="section-t" style="font-size:15.5px;margin:22px 4px 8px"><span class="bar" style="background:#37955f;height:15px"></span>⑤ 利润结构表（呼应第14章"中间余额表"）</div>
+<div class="chintro" style="margin:0 4px 6px">从销售收入一路拆到净利润，比咱们第14章"中间余额表"更完整的官方版流程：</div>
+<div class="dim">
+<div class="d" style="border-color:#37955f">销售商品收入 － 购买商品存货 ± 商品存货变动 ＝ <b>商业边际收益</b></div>
+<div class="d" style="border-color:#37955f">当期总产量 － 购买原材料等 ± 存货变动 － 其他购买和外部费用 ＝ <b>增加的价值</b></div>
+<div class="d" style="border-color:#37955f">增加的价值 ＋ 经营补贴 － 税金及类似费用 － 工资和薪水 － 社保福利 ＝ <b>经营毛利（EBITDA）</b></div>
+<div class="d" style="border-color:#37955f">EBITDA ＋ 准备金冲回 － 折旧费用和准备金 ± 其他经营收支 ＝ <b>经营利润（EBIT）</b></div>
+<div class="d" style="border-color:#37955f">EBIT ＋ 合营企业利润 ＋ 财务收入 － 财务费用 ± 非经常性收益 － 所得税 ＝ <b>净利润</b></div>
+</div>
+<div class="nb-say">🗣 <b>大白话：</b>净利润不是一步算出来的，是层层剥洋葱剥出来的——每剥一层，就排除掉一种"跟主业造血能力没关系"的干扰项（税金、折旧、利息、一次性损益），剥到最后剩下的才是最干净的经营真相。</div>
+
+<div class="section-t" style="font-size:15.5px;margin:22px 4px 8px"><span class="bar" style="background:#2fa39a;height:15px"></span>⑥ ROE 的高阶拆解公式</div>
+<div class="chintro" style="margin:0 4px 6px">比标准杜邦三因素（净利率×周转×杠杆）更精细的版本，多引入了"借钱的利率"和"税率"两个变量：</div>
+<div class="nb-formula">
+净资产收益率 ＝ 净利润 / 平均净资产<br>
+　　　　　　＝ [总资产报酬率 ＋（总资产报酬率 － 负债利息率）× 平均总负债/平均净资产] × (1 － 所得税率)
+</div>
+<div class="nb-say">🗣 <b>大白话：</b>这个公式在说一件事——只要"公司赚钱的回报率（总资产报酬率）"比"借钱的利率"高，多借钱反而能把ROE往上推，这就是杠杆的正向作用；一旦借钱的利率反超了赚钱的回报率，杠杆就从帮手变成拖累，借得越多亏得越狠。</div>
+
+<div class="section-t" style="font-size:15.5px;margin:22px 4px 8px"><span class="bar" style="background:#2e6da4;height:15px"></span>⑦ 阿里巴巴 vs 京东真实数据案例（2015–2019财年）</div>
+<div class="nb-wrap"><table class="nb-table">
+<tr><th>阿里巴巴</th><th>2015FY</th><th>2016FY</th><th>2017FY</th><th>2018FY</th><th>2019FY</th></tr>
+<tr><td>营业收入</td><td>76,204</td><td>101,143</td><td>158,273</td><td>250,266</td><td>376,844</td></tr>
+<tr><td>净利润</td><td>24,320</td><td>71,289</td><td>41,226</td><td>61,412</td><td>80,234</td></tr>
+<tr><td>资产总额</td><td>255,434</td><td>364,450</td><td>506,812</td><td>717,124</td><td>965,076</td></tr>
+<tr><td>股东权益总额</td><td>158,071</td><td>249,889</td><td>324,121</td><td>439,439</td><td>615,402</td></tr>
+</table></div>
+<div class="nb-wrap"><table class="nb-table">
+<tr><th>京东</th><th>2014FY</th><th>2015FY</th><th>2016FY</th><th>2017FY</th><th>2018FY</th></tr>
+<tr><td>营业收入</td><td>115,002</td><td>181,287</td><td>260,122</td><td>362,331</td><td>462,020</td></tr>
+<tr><td>净利润</td><td>(4,996)</td><td>(9,388)</td><td>(3,414)</td><td>(19)</td><td>(2,801)</td></tr>
+<tr><td>资产总额</td><td>66,493</td><td>85,166</td><td>160,374</td><td>184,055</td><td>209,165</td></tr>
+<tr><td>股东权益总额</td><td>37,498</td><td>30,678</td><td>41,220</td><td>52,389</td><td>76,828</td></tr>
+</table></div>
+<div class="nb-say">🗣 <b>大白话：</b>这组真实数据可以直接拿来练手算ROE三因子拆解——阿里常年净利润为正、京东这几年净利润是负的，两家公司的杜邦分解路径会完全不同，正好跟站上案例1"阿里·京东·拼多多"互相对照练习。</div>
+
+<div class="section-t" style="font-size:15.5px;margin:22px 4px 8px"><span class="bar" style="background:#8156c9;height:15px"></span>⑧ 财务报表投资价值分析·六问框架</div>
+<div class="dim">
+<div class="d" style="border-color:#8156c9"><b>Q1</b>ROE与ROE*的差异（净利润vs营业利润的差异，主要看利息收入、投资净损益、股权投资损益这些"非主业"项目）</div>
+<div class="d" style="border-color:#8156c9"><b>Q2</b>ROE*本身怎么拆解（营业利润率×总资产周转率×财务杠杆，再往下拆毛利率、各业务线毛利）</div>
+<div class="d" style="border-color:#8156c9"><b>Q3</b>成长性（销售收入增长率，拆到各业务线的增长率）</div>
+<div class="d" style="border-color:#8156c9"><b>Q4</b>盈利质量（利润是不是真的，呼应第17章）</div>
+<div class="d" style="border-color:#8156c9"><b>Q5</b>股价表现与财务表现是否一致（股价走势跟销售增长率、ROE*变化对不对得上）</div>
+<div class="d" style="border-color:#8156c9"><b>Q6</b>投资决策（综合前五问，判断投资价值和投资风险）</div>
+</div>
+<div class="nb-say">🗣 <b>大白话：</b>这六问是一套"从数字到决策"的完整通关流程，前四问是在拆数字，第五问是拿数字去对照市场怎么看，第六问才是真正要交的答案——买不买、买多少。分析报表如果只停在Q2就收工，等于只写了作业一半。</div>
+
+<div class="section-t" style="font-size:15.5px;margin:22px 4px 8px"><span class="bar" style="background:#c0392b;height:15px"></span>⑨ 常见财务粉饰及造假手法（11条，呼应第17章）</div>
+<div class="dim">
+<div class="d" style="border-color:#c0392b">① 自我交易虚增收入利润：虚构交易转出大额资金，设法转入客户，再以销售交易方式转回</div>
+<div class="d" style="border-color:#c0392b">② 与客户/供应商私下利益交换：期末集中发货提前确认收入，或放宽信用政策换收入增长；经销商模式下加大铺货、提前确认收入</div>
+<div class="d" style="border-color:#c0392b">③ 关联方代付成本费用，或以不公允价格向公司提供资源</div>
+<div class="d" style="border-color:#c0392b">④ 保荐机构/PE机构关联方在申报期最后一年与发行人发生大额交易，制造收入利润大幅增长假象</div>
+<div class="d" style="border-color:#c0392b">⑤ 体外资金支付货款，少计原材料采购数量金额，虚减当期成本、虚构利润</div>
+<div class="d" style="border-color:#c0392b">⑥ 技术手段指使关联方/自然人冒充互联网客户交易，虚增收入利润</div>
+<div class="d" style="border-color:#c0392b">⑦ 把应计入当期成本费用的支出，混入存货、在建工程等资产项目，少计当期成本费用</div>
+<div class="d" style="border-color:#c0392b">⑧ 压低员工薪金，阶段性降低人工成本粉饰业绩</div>
+<div class="d" style="border-color:#c0392b">⑨ 推迟正常经营管理所需费用开支，延迟成本费用发生期间</div>
+<div class="d" style="border-color:#c0392b">⑩ 期末对坏账、存货跌价等资产减值估计不足</div>
+<div class="d" style="border-color:#c0392b">⑪ 推迟在建工程转固定资产的时间，或延长折旧摊销年限、大幅计提减值后又冲回</div>
+</div>
+<div class="nb-say">🗣 <b>大白话：</b>这11条可以粗分两类：前6条是"动真交易"（钱真的在转，但转的目的是做局），后5条是"动记账笔杆"（钱没动，靠会计估计和分类做文章）——跟第17章讲的"两条操纵路径"完全对得上，这11条就是那两条路径下具体的操作手册。</div>
+
+<div class="section-t" style="font-size:15.5px;margin:22px 4px 8px"><span class="bar" style="background:#37516a;height:15px"></span>⑩ 财务信息质量特征清单</div>
+<div class="dim">
+<div class="d" style="border-color:#37516a"><b>基本质量指标</b>相关性（预测价值＋确认价值）、忠实反映（完整性＋中立性＋杜绝差错）、重要性</div>
+<div class="d" style="border-color:#37516a"><b>有用性优化指标</b>可比性、可验证性、时效性、可理解性、审慎性</div>
+</div>
+<div class="nb-say">🗣 <b>大白话：</b>这是国际会计准则理事会（IASB）定的"什么样的财报才算好财报"的官方标准，两条主线——先看这个信息跟决策相不相关（相关性），再看它是不是如实反映了真相（忠实反映），剩下几条都是锦上添花的优化项。</div>
+
+<div class="section-t" style="font-size:15px;margin:28px 4px 8px"><span class="bar" style="background:#7a8794;height:15px"></span>三、与预习站内容互相印证</div>
+<div class="dim">
+<div class="d" style="border-color:#7a8794">现金等式六种财务结构场景 → 对应<a href="index.html#ch15deep" style="color:#7a8794;font-weight:700">第15章「结构体检」</a>，连分类逻辑都一致</div>
+<div class="d" style="border-color:#7a8794">企业合并完全合并法/权益法 → 对应<a href="index.html#ch13deep" style="color:#7a8794;font-weight:700">第13章企业合并</a>，这份课件多给了一条判断口诀"控制权＝表决权≠权益权"</div>
+<div class="d" style="border-color:#7a8794">权责发生制 → 贯穿<a href="index.html#ch1deep" style="color:#7a8794;font-weight:700">第1章</a>全程，是"收入≠现金流入"那条题眼背后的原理</div>
+<div class="d" style="border-color:#7a8794">财务粉饰造假手法 → 对应<a href="index.html#ch17deep" style="color:#7a8794;font-weight:700">第17章「盈余质量」</a>，这份课件的11条是更细的操作手册</div>
+</div>
+
+<div class="cpr">说明：本页为学委对新东方教育集团财务负责人分享课件的整理笔记，仅呈现方法框架与教学用示意数字，供预习参考。</div>
+
+</div>
+</body>
+</html>
