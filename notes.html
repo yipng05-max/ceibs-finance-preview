@@ -227,10 +227,10 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
 </div>
 <div class="nb-say">🗣 <b>大白话：</b>有人欠你 100 块，说"今天给"和"明年给"，你肯定要今天的——因为今天拿到能存银行吃利息，而且不用担心他明年赖账。这个"宁要今天"的差价就是金钱的时间价值。DCF 整个公式其实就是这一个念头反复用 n 次：把明年、后年、大后年的钱各自折成"相当于今天的多少"，再加起来。</div>
 <div class="nb-formula">
-企业价值 V ＝ Σ<sub>t=1</sub><sup>n</sup> CF<sub>t</sub> ／ (1 ＋ r)<sup>t</sup> ＋ TV<sub>n</sub> ／ (1 ＋ r)<sup>n</sup><br>
-　CF<sub>t</sub>：第 t 年的（自由）现金流　　r：折现率　　TV<sub>n</sub>：第 n 年之后的终值<br>
-　终值常用永续增长法：TV<sub>n</sub> ＝ CF<sub>n+1</sub> ／ (r − g)，g 为长期增长率<br>
-<span style="font-family:inherit;color:#8a7a3a">↑ 标准形式，待按教授板书记号校正；教授强调的要点待补</span>
+<b>教授板书：</b>V<sub>0</sub> ＝ CF<sub>0</sub> ＋ CF<sub>1</sub> ／ (1 ＋ r)<sup>1</sup> ＋ CF<sub>2</sub> ／ (1 ＋ r)<sup>2</sup> ＋ …<br>
+　V<sub>0</sub>：今天的价值　　CF<sub>t</sub>：第 t 年的现金流　　r：折现率<br>
+　板书上圈了三个词：<b>DCF · TVM · WACC</b>——折现率 r 通常用 WACC（加权平均资本成本：股东要求的回报和债权人要求的利息按资本比例加权）<br>
+　（完整写法会把 n 年之后打包成终值 TV<sub>n</sub> ＝ CF<sub>n+1</sub> ／ (r − g) 再折现）
 </div>
 <div class="nb-say">🗣 <b>大白话：</b>一家公司值多少钱，等于它未来每年能掏出来的"自由的钱"，一年一年折算成今天的钱再加总。"折算"用的那个 r 就是折现率——明年的 100 块不如今天的 100 块，r 越大折得越狠。公式只有三个零件：未来现金流（分子）、折现率（分母）、终值（n 年之后一笔打包）。三个零件全靠预测和假设，所以 DCF 理论上最正统、实际上最主观——这正好接上前面 Asquith 那篇：分析师嘴上讲 DCF，手上用 P/E 倍数。<span class="pretag">呼应预习 · 第 17 章"自由现金流 FCFF/FCFE"（分子怎么来）、第 13 章九龙仓"折现率主观性最大"</span></div>
 
@@ -425,7 +425,17 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
     <div class="c4 c4d"><b>🗣 一句大白话</b><span>记账就像走钢丝，左脚动一下右脚必须跟着动，两边始终一样高——这根钢丝叫「平衡等式」。</span></div>
   </div>
 </div>
-<div class="cls" id="ch2cls"><div class="clshd"><span class="clstag">🎓 课堂补充</span><span class="clstitle">第2章 · 财务报表导言</span><span class="clsnote">上面是预习四段卡，下面精读区是预习底稿</span></div><div class="clsempty">📖 本章课堂内容待老师讲到后补充。</div></div>
+<div class="cls" id="ch2cls"><div class="clshd"><span class="clstag">🎓 课堂补充</span><span class="clstitle">第2章 · 财务报表导言</span><span class="clsnote">上面是预习四段卡，下面精读区是预习底稿</span></div><div class="dim">
+<div class="d"><b>第二讲 · 财务报表 · 本讲重点（教授 PPT）</b>整讲的主线是"会计是一门语言"：先学听和读，再学说和写。</div>
+</div>
+<div class="dim">
+<div class="d"><b>1. 年度报告与财务报表</b>Language, Communication &amp; Story-telling——年报是公司用会计语言讲的故事，三张表是故事的骨架。</div>
+<div class="d"><b>2. 资产负债表、利润表（损益表）、现金流量表</b>两个抓手：会计恒等式 A ＝ L ＋ E；三张表之间的关系 Earnings (IS) ＝ Operating Cash Flows (CFS) ＋ Accruals (BS)。</div>
+<div class="d"><b>3. 经济活动分析与财务报表</b>Language：<b>听 &amp; 读</b>——看到一笔经济活动，能读出它会落在哪张表、哪个科目。</div>
+<div class="d"><b>4. 财务报表编制</b>Language：<b>说 &amp; 写</b>——学一些编表的基础，目的不是当会计，而是"为了更好地听 &amp; 读"。</div>
+</div>
+<div class="nb-say">🗣 <b>大白话：</b>学外语先听读后说写，学财报也一样：第 1、2 点是认字（三张表长什么样、靠哪两个等式串起来），第 3 点是听读（一件事发生了，报表上会怎么动），第 4 点是说写（自己动手记几笔账）。教授特意说编表只是"为了更好地听读"——这门课的目标是决策者看懂报表，不是培养会计。<span class="pretag">呼应预习 · 本章精读"无敌公司 8 笔交易"就是第 3、4 点的练习场；"两张表怎么咬合"对应第 2 点</span></div>
+<div class="clsempty">✍️ 教授讲解要点、板书随堂补充中……</div></div>
 <div class="section-t" id="ch2deep"><span class="bar" style="background:#2e6da4"></span>第二章精读 · 三张表怎么一笔笔长出来</div>
 <div style="margin:8px 4px 2px;padding:10px 14px;background:#f6f1ff;border:1.5px solid #d9c9f2;border-radius:11px"><div style="font-size:13px;color:#42535f;margin-bottom:6px">🎧 <b style="color:#6f42c1">本章白话语音版</b>（约 5 分钟 · 跑步开车息屏都能听 · 自动记住进度，下次接着播）</div><audio class="chaud" data-ch="2" controls preload="metadata" src="voice/ch2.mp3" style="width:100%;height:34px"></audio></div>
 <img class="casehero" src="ch2_hero.png" alt="商业平衡等式：一杆永远平衡的天平">
@@ -657,7 +667,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
   </div>
 </div>
 <div class="cls" id="ch3cls"><div class="clshd"><span class="clstag">🎓 课堂补充</span><span class="clstitle">第3章 · 会计报表的关联和框架</span><span class="clsnote">上面是预习四段卡，下面精读区是预习底稿</span></div><div class="dim">
-<div class="d"><b>第二讲 · 三个报表之间的关系</b>教授从这里开始第二讲：资产负债表、利润表、现金流量表三张表怎么互相勾连。第一讲埋下的等式 Earnings ＝ Operating Cash Flows ＋ Accruals 在这一讲展开。</div>
+<div class="d"><b>第二讲 · 重点 2 · 三个报表之间的关系</b>资产负债表、利润表、现金流量表三张表怎么互相勾连（第二讲整体提纲见第 2 章黄框）。第一讲埋下的等式 Earnings (IS) ＝ Operating Cash Flows (CFS) ＋ Accruals (BS) 在这里展开。</div>
 </div>
 <div class="nb-say">🗣 <b>大白话：</b>三张表不是三份独立的文件，是同一台机器的三个仪表盘：资产负债表是"期初/期末两张家底照片"，利润表解释"家底里归股东那部分为什么变了"，现金流量表解释"家底里现金那一格为什么变了"。任何一笔业务动了一张表，一定会在另一张表上留下痕迹。<span class="pretag">呼应预习 · 本章精读"压轴 · 三张表怎么拼成一台机器"那张联动图，以及"动手玩 · 把无敌公司的钱归成三类"</span></div>
 <div class="clsempty">✍️ 教授讲解要点、板书随堂补充中……</div></div>
