@@ -61,7 +61,19 @@ for n in CHAPTERS:
     assert chapters.count(anchor) == 1, f'ch{n}deep anchor not unique'
     chapters = chapters.replace(anchor, class_block(n) + anchor)
 
-nav = ''.join(f'<a href="#ch{n}cls" class="navlink">{n}. {TITLES[n]}</a>' for n in CHAPTERS)
+# 延伸章黄框(第4/7/8/10章,丁远教授D3选修阅读,预习站无独立章卡):插在板块二分隔条之前
+ext_path = os.path.join(NOTES_DIR, 'ext.html')
+ext_body = open(ext_path, encoding='utf-8').read().strip() if os.path.exists(ext_path) else ''
+if not ext_body:
+    ext_body = '<div class="clsempty">📖 丁远教授 D3 内容待补充。</div>'
+ext_block = ('<div class="cls" id="extcls"><div class="clshd"><span class="clstag">🎓 课堂补充</span>'
+             '<span class="clstitle">延伸章 · 第 4/7/8/10 章（会计原则 · 有形资产 · 无形资产 · 金融资产）</span>'
+             '<span class="clsnote">丁远教授 D3 选修阅读，预习站无独立章卡</span></div>' + ext_body + '</div>\n')
+anchor2 = '<div class="blockdiv" style="background:linear-gradient(135deg,#8156c9,#8156c9cc)">'
+assert chapters.count(anchor2) == 1, 'block2 anchor'
+chapters = chapters.replace(anchor2, ext_block + anchor2)
+
+nav = ''.join(f'<a href="#ch{n}cls" class="navlink">{n}. {TITLES[n]}</a>' for n in CHAPTERS) + '<a href="#extcls" class="navlink">延伸 4/7/8/10</a>'
 
 page = f'''<!doctype html>
 <html lang="zh-CN">
